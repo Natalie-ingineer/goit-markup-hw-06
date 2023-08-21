@@ -18,6 +18,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="screen and (min-width: 1158px)"
+    />
   </head>
 
   <body>
@@ -27,6 +37,36 @@
           <a href="./index.html" class="link logo"
             >WEB<span class="logo-studio">Studio</span></a
           >
+
+          /** |============================ | mobile-menu
+          |============================ */
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="gamburger-btn" width="32" height="22">
+              <use href="./images/icons.svg#icon-gamburger"></use>
+            </svg>
+          </button>
+
+          <div
+            class="menu-container js-menu-container is-hidden"
+            id="mobile-menu"
+          >
+            <div class="mobile-window">
+              <button type="button" class="btn-modal" data-modal-close>
+                <svg class="icon-crestik" width="8" height="8">
+                  <use href="./images/icons.svg#icon-crestik"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          /** |============================ | desctop+tablet
+          |============================ */
+
           <ul class="nav-list">
             <li class="nav-list-item">
               <a href="./index.html" class="nav-link link current">Studio</a>
@@ -643,6 +683,7 @@
       </div>
     </div>
 
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

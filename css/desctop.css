@@ -1,75 +1,4 @@
-/**
-  |============================
-  |       Base styles
-  |============================
-*/
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--primary-color-text);
-  background-color: var(--primary-background);
-}
-:root {
-  --primary-background: #fff;
-  --background-color: #2e2f42;
-  --primary-color-text: #434455;
-  --color-button: #4d5ae5;
-  --background-color-portfolio: #f4f4fd;
-  --color-button-nav: #404bbf;
-  --color-button-portfolio: #e7e9fc;
-  --border-customers: #8e8f99;
-  --socials-footer-color-link: #31d0aa;
-  --navyblue-modal: #2e2f4266 40%;
-  --modal-btn-background: #fcfcfc;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: var(--background-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/**
+/* *
   |============================
   |         Header styles
   |============================
@@ -110,7 +39,7 @@ li {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.17;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-button);
   margin-right: 76px;
@@ -184,8 +113,7 @@ li {
   font-size: 16px;
   text-decoration: none;
   line-height: 1.5;
-  letter-spacing: 0.32px;
-  font-style: normal;
+  letter-spacing: 0.02em;
   display: block;
   padding: 24px 0;
   transition-property: color;
@@ -220,13 +148,12 @@ li {
 .button {
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
-  background: var(--color-button);
   background-color: var(--color-button);
   color: var(--primary-background);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -254,7 +181,7 @@ h1 {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
-  letter-spacing: 1.12px;
+  letter-spacing: 0.02em;
   max-width: 496px;
   margin: 0 auto;
 }
@@ -291,7 +218,6 @@ h1 {
 
 .concept-item {
   flex-basis: calc((100% - 72px) / 4);
-  justify-content: center;
 }
 
 .concept-title {
@@ -301,7 +227,6 @@ h1 {
   line-height: 1.2;
   letter-spacing: 0.02em;
   display: block;
-  justify-content: center;
   margin-bottom: 8px;
 }
 
@@ -312,7 +237,6 @@ h1 {
   letter-spacing: 0.02em;
   width: 264px;
   display: block;
-  justify-content: center;
 }
 
 /**
@@ -321,7 +245,7 @@ h1 {
   |============================
 */
 .doing {
-  background: #fff;
+  background: var(--primary-background);
   padding-bottom: 120px;
 }
 
@@ -333,7 +257,7 @@ h1 {
 }
 
 .doing-item {
-  display: inline-block;
+  display: block;
   flex-basis: calc((100% - 48px) / 3);
 }
 
@@ -348,7 +272,7 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 72px;
@@ -379,14 +303,11 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
   display: block;
-  align-items: center;
   margin-bottom: 72px;
-  justify-content: center;
-  align-content: center;
 }
 
 .card-heading {
@@ -397,8 +318,6 @@ h1 {
   text-align: center;
   letter-spacing: 0.02em;
   display: block;
-  justify-content: center;
-  align-content: center;
   margin-bottom: 8px;
 }
 .card-desc {
@@ -409,8 +328,6 @@ h1 {
   letter-spacing: 0.02em;
   width: 264px;
   display: block;
-  justify-content: center;
-  align-content: center;
   margin-bottom: 8px;
 }
 
@@ -418,11 +335,9 @@ h1 {
   background: var(--primary-background);
   text-align: center;
   border-radius: 0px 0px 4px 4px;
-  background: var(--white, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  gap: 24px;
 }
 
 .picture-team {
@@ -483,7 +398,7 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
   display: block;
@@ -527,8 +442,6 @@ h1 {
   background: var(--primary-background);
   padding-top: 96px;
   padding-bottom: 120px;
-  justify-content: center;
-  align-items: center;
 }
 
 .portfolio-button-list {
@@ -546,7 +459,7 @@ h1 {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
   display: block;
   padding: 12px 24px;
   border: 1px solid var(--color-button-portfolio);
@@ -576,7 +489,6 @@ h1 {
 .item-card {
   background: var(--primary-background);
   width: calc((100% - 48px) / 3);
-  background: var(--primary-background);
 }
 
 .prj-card {
@@ -628,7 +540,7 @@ h1 {
   color: var(--background-color-portfolio);
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   background-color: var(--color-button);
   position: absolute;
   top: 0;
@@ -672,7 +584,7 @@ h1 {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.17;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-button);
   display: inline-block;
@@ -695,10 +607,9 @@ h1 {
 .footer-socials {
   color: var(--primary-background);
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   display: block;
   margin-bottom: 16px;
 }
@@ -1085,4 +996,4 @@ input:checked + label > span {
 
 .checkbox-icon:focus {
   border-color: var(--color-button-nav);
-}
+} */
