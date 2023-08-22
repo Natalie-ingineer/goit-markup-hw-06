@@ -65,3 +65,31 @@ h1 {
 .costomers-link {
   width: 168px;
 }
+
+/**
+  |============================
+  |         Portfolio
+  |============================
+*/
+
+.portfolio {
+  padding: 64px 0;
+}
+
+.portfolio-button-list {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  justify-content: center;
+}
+
+.prj-card-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+  justify-content: flex-start;
+}
+
+.item-card {
+  width: calc((100% - 24px) / 2);
+}
