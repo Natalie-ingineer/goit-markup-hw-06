@@ -17,7 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="./css/tablet.css"
@@ -33,23 +33,19 @@
   <body>
     <header class="header-nav">
       <div class="container">
-        <nav class="navigation">
+        <!-- <nav class="navigation"> -->
           <a href="./index.html" class="link logo"
             >WEB<span class="logo-studio">Studio</span></a
           >
-
-          /** |============================ | mobile-menu
-          |============================ */
-
-          <button
-            class="menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg class="gamburger-btn" width="32" height="22">
-              <use href="./images/icons.svg#icon-gamburger"></use>
-            </svg>
+                    <!--mobile window-->
+          <button type="button" aria-expanded="false"
+          aria-controls="mobile-menu"
+              class="menu-btn js-open-menu">
+              <svg class="icon-gamburger" width="32" height="22">
+               <use href="./images/icons.svg#icon-gamburger"></use>
+              </svg>
           </button>
+          </div>
 
           <div
             class="menu-container js-menu-container is-hidden"
@@ -64,10 +60,8 @@
             </div>
           </div>
 
-          /** |============================ | desctop+tablet
-          |============================ */
-
-          <ul class="nav-list">
+        
+          <!-- <ul class="nav-list">
             <li class="nav-list-item">
               <a href="./index.html" class="nav-link link current">Studio</a>
             </li>
@@ -79,10 +73,10 @@
             <li class="nav-list-item">
               <a href="" class="nav-link link">Contacts</a>
             </li>
-          </ul>
-        </nav>
+          </ul> -->
+        <!-- </nav> -->
 
-        <address class="nav-list-contacts">
+        <!-- <address class="nav-list-contacts">
           <ul class="contacts-list">
             <li class="contacts-list-item">
               <a href="mailto:info@devstudio.com" class="contacts-list-link"
@@ -95,7 +89,7 @@
               >
             </li>
           </ul>
-        </address>
+        </address>  -->
       </div>
     </header>
 
@@ -110,6 +104,8 @@
           </button>
         </div>
       </section>
+
+
       <!--Section 2-->
       <!--Concept-->
       <section class="concept">
@@ -118,11 +114,11 @@
 
           <ul class="concept-list">
             <li class="concept-item">
-              <div class="wraper">
+              <!-- <div class="wraper">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
-              </div>
+              </div> -->
               <h3 class="concept-title">Strategy</h3>
               <p class="concept-text">
                 Our goal is to identify the business problem to walk away with
@@ -131,11 +127,11 @@
             </li>
 
             <li class="concept-item">
-              <div class="wraper">
+              <!-- <div class="wraper">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
-              </div>
+              </div> -->
               <h3 class="concept-title">Punctuality</h3>
               <p class="concept-text">
                 Bring the key message to the brand's audience for the best price
@@ -144,11 +140,11 @@
             </li>
 
             <li class="concept-item">
-              <div class="wraper">
+              <!-- <div class="wraper">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
-              </div>
+              </div> -->
               <h3 class="concept-title">Diligence</h3>
               <p class="concept-text">
                 Research and confirm brands that present the strongest digital
@@ -157,11 +153,11 @@
             </li>
 
             <li class="concept-item">
-              <div class="wraper">
+              <!-- <div class="wraper">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
-              </div>
+              </div> -->
               <h3 class="concept-title">Technologies</h3>
               <p class="concept-text">
                 Design practice focused on digital experiences. We bring forth a
@@ -171,9 +167,11 @@
           </ul>
         </div>
       </section>
+
+
       <!--Section 3-->
       <!--What are we doing-->
-      <section class="doing">
+      <!-- <section class="doing">
         <div class="container">
           <h2 class="title">What are we doing</h2>
 
@@ -207,10 +205,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--Section 4-->
       <!--Our team-->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -459,10 +457,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--Section 5-->
       <!--Customers-->
-      <section class="customers">
+      <!-- <section class="customers">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
           <ul class="customers-list">
@@ -510,10 +508,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-box">
           <a href="./index.html" class="link footer-logo-web"
@@ -681,7 +679,7 @@
           <button type="submit" class="send-btn">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>

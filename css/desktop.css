@@ -4,7 +4,7 @@
   |============================
 */
 
-.header-nav {
+/* .header-nav {
   background: var(--primary-background);
   border-bottom: 1px solid var(--color-button-portfolio);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -123,7 +123,7 @@
 .contacts-list-link:hover,
 .contacts-list-link:focus {
   color: var(--color-button-nav);
-}
+} */
 
 /**
   |============================
@@ -132,17 +132,8 @@
 */
 
 .hero {
-  max-width: 1440px;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero-bg.jpg);
   padding: 188px 0;
-  margin: 0 auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .button {
@@ -176,14 +167,8 @@
 }
 
 h1 {
-  color: var(--primary-background);
-  text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  max-width: 496px;
-  margin: 0 auto;
+  padding-bottom: 48px;
+
 }
 
 /**
@@ -204,39 +189,29 @@ h1 {
 }
 
 .concept {
-  background: var(--primary-background);
-  padding: 120px 0;
+   padding: 120px 0;
 }
 
 .concept-list {
   max-width: 1128px;
-  display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 24px;
-  align-items: center;
-}
+  align-items: baseline;
+ }
 
 .concept-item {
   flex-basis: calc((100% - 72px) / 4);
 }
 
 .concept-title {
-  color: var(--background-color);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.02em;
-  display: block;
-  margin-bottom: 8px;
 }
 
 .concept-text {
-  color: var(--primary-color-text);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-weight: 400;
   width: 264px;
-  display: block;
 }
 
 /**

@@ -54,10 +54,27 @@ li {
   margin: 0;
 }
 .container {
-  width: 428px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -76,6 +93,23 @@ li {
   | mobile window
   |============================
 */
+
+.mobile-menu-box {
+  display: flex;
+}
+
+.menu-btn {
+  display: block;
+  border: none;
+  background-color: var(--primary-background);
+  padding: 0;
+}
+
+.icon-gamburger {
+  display: block;
+  width: 100%;
+  stroke: var(--background-color);
+}
 
 .menu-container {
   position: fixed;
@@ -112,14 +146,15 @@ li {
 
 .header-nav .container {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 .nav-list {
   gap: 40px;
@@ -139,7 +174,7 @@ li {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-button);
-  margin-right: 76px;
+  padding: 24px 0;
 }
 .logo-studio {
   color: var(--background-color);
@@ -238,6 +273,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 112px 0;
 }
 
 @media (min-device-pixel-ratio: 2) and (max-width: 479px),
@@ -314,7 +350,7 @@ li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 48px;
+
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -329,10 +365,54 @@ li {
 h1 {
   color: var(--primary-background);
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  text-transform: capitalize;
+  width: 320px;
+  padding-bottom: 72px;
   margin: 0 auto;
+}
+
+/**
+  |============================
+  |      Concept
+  |============================
+*/
+
+.concept {
+  background: var(--primary-background);
+  padding: 96px 0;
+}
+
+.concept-list {
+  max-width: 428px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
+}
+
+.concept-item {
+  max-width: 100%;
+}
+
+.concept-title {
+  color: var(--background-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.concept-text {
+  color: var(--primary-color-text);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
 }
