@@ -93,3 +93,45 @@ h1 {
 .item-card {
   width: calc((100% - 24px) / 2);
 }
+
+/**
+  |============================
+  |        Footer styles
+  |============================
+*/
+
+.footer .container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 72px;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.footer-logo-web {
+  text-align: start;
+}
+
+.footer-socials {
+  text-align: start;
+}
+
+.footer-text {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.footer-subtitle {
+  text-align: start;
+  margin-top: 0;
+}
+
+.footer-form-input {
+  min-width: 264px;
+  margin-bottom: 0;
+}
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
