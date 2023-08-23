@@ -124,12 +124,6 @@ li {
   border: none;
 }
 
-/* @media screen and (max-width: 768px) {
-  .menu-btn {
-    display: none;
-  }
-} */
-
 .menu-btn:hover,
 .menu-btn:focus {
   background-color: rgba(0, 0, 0, 0.1);
@@ -252,13 +246,19 @@ li {
   |============================
 */
 
+.nav-list {
+  display: none;
+}
+
+.contacts-list {
+  display: none;
+}
+
 .header-nav {
   background: var(--primary-background);
   border-bottom: 1px solid var(--color-button-portfolio);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
-  margin: 0 auto;
 }
 
 .header-nav .container {
@@ -273,12 +273,7 @@ li {
   align-items: center;
   justify-content: space-between;
 }
-.nav-list {
-  gap: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .link {
   text-decoration: none;
 }
@@ -297,80 +292,7 @@ li {
   color: var(--background-color);
 }
 
-.nav-list-item {
-  display: flex;
-  padding: 0;
-}
-
-.nav-link {
-  color: var(--background-color);
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  list-style-type: none;
-  display: block;
-  padding: 24px 0;
-  position: relative;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .current {
-  color: var(--color-button-nav);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--color-button-nav);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  height: 4px;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-button-nav);
-  transform: scaleX(0);
-  transition: transform 250ms linear;
-  bottom: -1px;
-  border-radius: 2px;
-}
-
-.nav-link:hover::after,
-.nav-link:focus::after,
-.nav-link.current::after {
-  transform: scaleX(1);
-}
-
-.nav-list-contacts {
-  font-style: normal;
-  margin-left: auto;
-}
-.contacts-list {
-  gap: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.contacts-list-link {
-  color: var(--primary-color-text);
-  font-size: 16px;
-  text-decoration: none;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  display: block;
-  padding: 24px 0;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts-list-link:hover,
-.contacts-list-link:focus {
   color: var(--color-button-nav);
 }
 
@@ -1026,6 +948,7 @@ h1 {
   top: 50%;
   width: 392px;
   padding: 72px 24px 24px 24px;
+  background-color: var(--modal-btn-background);
 
   transform: translate(-50%, -50%) scale(1);
   background: var(--modal-btn-background);
@@ -1265,6 +1188,8 @@ input:checked + label > span {
 .checkbox-icon {
   max-width: 100%;
   fill: var(--primary-background);
+  stroke-width: 1px;
+  stroke: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 }
 
 .checkbox-icon:focus {
