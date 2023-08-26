@@ -243,5 +243,6 @@ h1 {
 */
 
 .modal {
-  width: 408px;
+  max-width: 408px;
+  width: 100%;
 }
