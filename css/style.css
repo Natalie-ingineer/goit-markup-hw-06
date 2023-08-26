@@ -54,6 +54,7 @@ li {
   margin: 0;
 }
 .container {
+  min-width: 320px;
   max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
@@ -98,11 +99,23 @@ li {
   overflow: hidden;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /**
   |============================
   | mobile window
   |============================
 */
+
+.menu-box {
+  margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
+}
 
 .mobile-menu-btn {
   display: block;
@@ -141,18 +154,23 @@ li {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding-top: 80px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
+
   background-color: var(--primary-background);
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  height: 100%;
+  overflow-y: auto;
 
   transform: translateX(-100%);
   transition: transform 250ms ease-in-out;
+  margin-bottom: auto;
+
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
 }
 
 .menu-container.is-open {
@@ -169,6 +187,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: auto;
 }
 
 .link-mobile-menu {
@@ -194,7 +213,6 @@ li {
 
 .list-contacts-mobile-menu {
   font-style: normal;
-  margin-left: auto;
 }
 .contacts-list-mobile-menu {
   gap: 40px;
@@ -212,6 +230,18 @@ li {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 432px) {
+  .contacts-link-tel-mobile-menu {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 433px) and (max-width: 767px) {
+  .contacts-link-tel-mobile-menu {
+    font-size: 36px;
+  }
 }
 
 .contacts-link-mobile-menu {
@@ -232,12 +262,26 @@ li {
 }
 
 .mobile-menu-socials-wraper {
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-menu-socials-list {
   display: flex;
-  gap: 56px;
   justify-content: center;
+}
+
+@media (min-width: 320px) and (max-width: 427px) {
+  .mobile-menu-socials-list {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 767px) {
+  .mobile-menu-socials-list {
+    gap: 56px;
+  }
 }
 
 /**
@@ -303,21 +347,21 @@ li {
 */
 
 .hero {
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office-mobile.jpg);
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 112px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office-mobile.jpg);
 }
 
-@media (min-device-pixel-ratio: 2) and (max-width: 479px),
-  (min-resolution: 192dpi) and (max-width: 479px),
-  (min-resolution: 2dppx) and (max-width: 479px) {
+@media (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -327,7 +371,7 @@ li {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -337,9 +381,9 @@ li {
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (max-width: 480px),
-  (min-resolution: 192dpi) and (max-width: 480px),
-  (min-resolution: 2dppx) and (max-width: 480px) {
+@media (min-device-pixel-ratio: 2) and (max-width: 1157px),
+  (min-resolution: 192dpi) and (max-width: 1157px),
+  (min-resolution: 2dppx) and (max-width: 1157px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -349,7 +393,7 @@ li {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -359,9 +403,9 @@ li {
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (max-width: 768px),
-  (min-resolution: 192dpi) and (max-width: 768px),
-  (min-resolution: 2dppx) and (max-width: 768px) {
+@media (min-device-pixel-ratio: 2) and (max-width: 1200px),
+  (min-resolution: 192dpi) and (max-width: 1200px),
+  (min-resolution: 2dppx) and (max-width: 1200px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -409,9 +453,30 @@ h1 {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  width: 320px;
+  max-width: 320px;
   padding-bottom: 72px;
   margin: 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 427px) {
+  .hero {
+    width: 100%;
+  }
+  .costomers-link {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 767px) {
+  .hero {
+    width: 398px;
+    margin: 0 auto;
+  }
+  .costomers-link {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /**
@@ -597,9 +662,12 @@ h1 {
   fill: currentColor;
 }
 
+.costomers-item {
+  flex-basis: calc((100% - 16px) / 2);
+}
+
 .costomers-link {
   display: flex;
-  width: 190px;
   height: 88px;
   color: var(--border-customers);
   border-radius: 4px;
@@ -608,6 +676,27 @@ h1 {
   align-items: center;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 320px) and (max-width: 427px) {
+  .customers {
+    width: 100%;
+  }
+  .costomers-link {
+    width: 100%;
+    max-width: 190px;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 767px) {
+  .customers {
+    width: 398px;
+    margin: 0 auto;
+  }
+  .costomers-link {
+    width: 100%;
+    max-width: 190px;
+  }
 }
 
 .costomers-link:hover,
@@ -843,10 +932,10 @@ h1 {
 .footer-subscribe {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .footer-form {
-  max-width: 428px;
 }
 
 .footer-form-label {
@@ -867,8 +956,8 @@ h1 {
 .footer-form-input {
   height: 40px;
   padding-left: 16px;
-  max-width: 428px;
-  min-width: 320px;
+  width: 100%;
+  max-width: 398px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   border: 1px solid var(--primary-background);
@@ -879,6 +968,27 @@ h1 {
   line-height: 1.5;
   letter-spacing: 0.04em;
   margin-bottom: 16px;
+}
+
+@media (min-width: 320px) and (max-width: 427px) {
+  .footer-subscribe {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+    max-width: 398px;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 767px) {
+  .footer-subscribe {
+    width: 396px;
+    margin: 0 auto;
+  }
+  .input {
+    width: 100%;
+    max-width: 398px;
+  }
 }
 
 .footer-form .placeholder {

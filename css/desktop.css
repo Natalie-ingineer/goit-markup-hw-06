@@ -180,6 +180,7 @@ h1 {
 }
 
 .customers-list {
+  flex-wrap: nowrap;
   gap: 24px;
 }
 
