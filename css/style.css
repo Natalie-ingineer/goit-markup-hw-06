@@ -1058,7 +1058,7 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 392px;
+  /* max-width: 392px; */
   padding: 72px 24px 24px 24px;
   background-color: var(--modal-btn-background);
 
@@ -1075,21 +1075,17 @@ h1 {
   align-items: center;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px) and (min-width: 428px) {
   .modal {
-    width: 90%;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 428px) {
-  .modal {
-    width: 392px;
+    max-width: 392px;
+    width: 100%;
   }
 }
 
 @media (min-width: 769px) {
   .modal {
-    width: 408px;
+    max-width: 408px;
+    width: 100%;
   }
 }
 
