@@ -21,6 +21,7 @@ body {
   --socials-footer-color-link: #31d0aa;
   --navyblue-modal: #2e2f4266 40%;
   --modal-btn-background: #fcfcfc;
+  --feedback-form-placeholder: #2e2f42;
 }
 
 *,
@@ -215,12 +216,12 @@ img {
 
 .list-contacts-mobile-menu {
   font-style: normal;
+  margin-bottom: 48px;
 }
 .contacts-list-mobile-menu {
   gap: 40px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 48px;
 }
 .contacts-link-tel-mobile-menu {
   color: var(--color-button);
@@ -271,7 +272,6 @@ img {
 
 .mobile-menu-socials-list {
   display: flex;
-  justify-content: center;
 }
 
 @media (min-width: 320px) and (max-width: 427px) {
@@ -447,7 +447,7 @@ img {
   color: var(--primary-background);
 }
 
-h1 {
+.main-page {
   color: var(--primary-background);
   text-align: center;
   font-size: 36px;
@@ -456,8 +456,9 @@ h1 {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   max-width: 320px;
-  padding-bottom: 72px;
-  margin: 0 auto;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 320px) and (max-width: 427px) {
@@ -691,10 +692,6 @@ h1 {
 }
 
 @media (min-width: 428px) and (max-width: 767px) {
-  .customers {
-    width: 398px;
-    margin: 0 auto;
-  }
   .costomers-link {
     width: 100%;
     max-width: 190px;
@@ -877,7 +874,7 @@ h1 {
   color: var(--background-color-portfolio);
   max-width: 264px;
   display: block;
-  margin-bottom: 72px;
+  padding-bottom: 72px;
 }
 
 .footer-socials {
@@ -951,8 +948,8 @@ h1 {
   text-align: center;
   letter-spacing: 0.02em;
   display: block;
-  margin-top: 72px;
   margin-bottom: 16px;
+  padding-top: 72px;
 }
 
 .footer-form-input {
@@ -960,16 +957,19 @@ h1 {
   padding-left: 16px;
   width: 100%;
   max-width: 398px;
+  color: var(--primary-background);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   border: 1px solid var(--primary-background);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  color: var(--primary-background);
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  margin-bottom: 16px;
+}
+
+input::placeholder {
+  color: var(--primary-background);
 }
 
 @media (min-width: 320px) and (max-width: 427px) {
@@ -993,10 +993,6 @@ h1 {
   }
 }
 
-.footer-form .placeholder {
-  color: var(--primary-background);
-}
-
 .subscribe-btn {
   min-width: 165px;
   height: 40px;
@@ -1005,7 +1001,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   cursor: pointer;
   border: none;
   color: var(--primary-background);
@@ -1014,6 +1009,8 @@ h1 {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  margin: 0 auto;
+  margin-top: 16px;
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -1076,20 +1073,6 @@ h1 {
   align-items: center;
 }
 
-/* @media (max-width: 320px) and (min-width: 428px) {
-  .modal {
-    max-width: 392px;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal {
-    max-width: 408px;
-    width: 100%;
-  }
-} */
-
 .btn-modal,
 .btn-menu-close {
   position: absolute;
@@ -1123,8 +1106,6 @@ h1 {
 }
 
 .subtitle-form {
-  width: 360px;
-
   margin: 0 auto;
   display: block;
 
@@ -1176,6 +1157,8 @@ h1 {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
 
+  color: var(--background-color);
+
   padding-left: 38px;
   outline: transparent;
   transition-property: border-color;
@@ -1195,7 +1178,7 @@ h1 {
 }
 
 .feedback-form {
-  color: rgba(46, 47, 66, 0.4);
+  color: var(--background-color);
   background-color: transparent;
   width: 100%;
   height: 120px;
@@ -1210,6 +1193,10 @@ h1 {
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 4px;
+}
+
+.feedback-form::placeholder {
+  color: var(--border-customers);
 }
 
 .feedback-form:focus {

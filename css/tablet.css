@@ -17,6 +17,7 @@
 .logo {
   margin-right: 120px;
 }
+
 .nav-list {
   gap: 40px;
   display: flex;
@@ -45,6 +46,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current {
+  color: var(--color-button-nav);
+}
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-button-nav);
@@ -107,12 +111,12 @@
 .hero {
 }
 
-h1 {
+.main-page {
   font-size: 56px;
   line-height: 1.07;
   text-transform: none;
   min-width: 496px;
-  padding-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 /**
@@ -127,6 +131,10 @@ h1 {
   flex-wrap: wrap;
   row-gap: 72px;
   column-gap: 24px;
+}
+
+.concept-title {
+  text-align: left;
 }
 
 .concept-item {
@@ -173,13 +181,14 @@ h1 {
 */
 
 .portfolio {
-  padding: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 96px;
 }
 
 .portfolio-button-list {
   display: flex;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   justify-content: center;
 }
 
@@ -220,11 +229,18 @@ h1 {
 .footer-text {
   text-align: start;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .footer-subtitle {
   text-align: start;
   margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.footer-subscribe {
+  margin: 0;
 }
 
 .footer-form-input {
@@ -234,6 +250,10 @@ h1 {
 .footer-form {
   display: flex;
   gap: 24px;
+}
+
+.subscribe-btn {
+  margin-top: 0;
 }
 
 /**

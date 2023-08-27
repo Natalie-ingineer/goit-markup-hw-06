@@ -25,6 +25,7 @@
 */
 
 .hero {
+  max-width: 1440px;
   padding: 188px 0;
 }
 
@@ -46,7 +47,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 48px;
+
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -58,8 +59,9 @@
   color: var(--primary-background);
 }
 
-h1 {
-  padding-bottom: 48px;
+.main-page {
+  padding-bottom: 0;
+  margin-bottom: 48px;
 }
 
 /**
@@ -191,7 +193,8 @@ h1 {
 */
 
 .portfolio {
-  padding-top: 96px;
+  padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 .portfolio-button-list {
@@ -228,7 +231,6 @@ h1 {
 }
 
 .footer-subscribe {
-  max-width: 264px;
   margin-left: 80px;
 }
 
