@@ -218,6 +218,10 @@
   align-items: baseline;
 }
 
+.footer-box {
+  margin-bottom: 0;
+}
+
 .footer-logo-web {
   text-align: start;
 }
@@ -237,6 +241,10 @@
   margin-top: 0;
   padding-bottom: 0;
   padding-top: 0;
+}
+
+.footer-socials-wraper {
+  margin-bottom: 0;
 }
 
 .footer-subscribe {

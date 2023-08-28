@@ -868,13 +868,16 @@ img {
   background-color: var(--background-color);
 }
 
+.footer-box {
+  margin-bottom: 72px;
+}
+
 .footer-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--background-color-portfolio);
   max-width: 264px;
   display: block;
-  padding-bottom: 72px;
 }
 
 .footer-socials {
@@ -928,6 +931,10 @@ img {
   background-color: var(--socials-footer-color-link);
 }
 
+.footer-socials-wraper {
+  margin-bottom: 72px;
+}
+
 .footer-subscribe {
   display: flex;
   flex-direction: column;
@@ -949,7 +956,6 @@ img {
   letter-spacing: 0.02em;
   display: block;
   margin-bottom: 16px;
-  padding-top: 72px;
 }
 
 .footer-form-input {
